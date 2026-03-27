@@ -1,4 +1,4 @@
-//Student Manager Project
+// Java Swing GUI Application
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
