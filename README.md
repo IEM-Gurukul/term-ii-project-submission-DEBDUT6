@@ -1,43 +1,33 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pG3gvzt-)
 # PCCCS495 – Term II Project
 
-## Project Title
+# Student Record Manager
 
----
-
-## Problem Statement (max 150 words)
-
----
+## Problem Statement
+Managing student records manually is difficult and error-prone. This project provides a simple Java Swing GUI application to add and manage student details efficiently.
 
 ## Target User
-
----
+- Teachers
+- Students
+- Small educational institutions
 
 ## Core Features
-
-- 
-- 
-- 
-
----
+- Add student details
+- Display records in table
+- Simple GUI interface
+- Input validation
 
 ## OOP Concepts Used
+- Encapsulation
+- Abstraction
+- Collections
+- Exception Handling
 
-- Abstraction:
-- Inheritance:
-- Polymorphism:
-- Exception Handling:
-- Collections / Threads:
-
----
-
-## Proposed Architecture Description
-
----
+## Architecture Description
+The application uses a simple GUI-based structure. The user enters data through input fields, and event handling is used to process actions. Data is stored using ArrayList and displayed using JTable.
 
 ## How to Run
-
----
-
-## Git Discipline Notes
-Minimum 10 meaningful commits required.
+1. Compile:
+   javac StudentManager.java
+2. Run:
+   java StudentManager
