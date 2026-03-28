@@ -50,6 +50,7 @@ public class StudentManager extends JFrame {
         JScrollPane pane = new JScrollPane(table);
         pane.setBounds(20,150,440,200);
         add(pane);
+         //Add Button Action Logic (Insert Student Data)
         addBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String id = idField.getText();
