@@ -56,6 +56,7 @@ public class StudentManager extends JFrame {
                 String id = idField.getText();
                 String name = nameField.getText();
                 String course = courseField.getText();
+                 //Validation Check
                 if(id.isEmpty() || name.isEmpty() || course.isEmpty()) {
                     JOptionPane.showMessageDialog(null,"Fill all fields");
                     return;
