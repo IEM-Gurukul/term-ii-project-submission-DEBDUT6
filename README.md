@@ -11,6 +11,8 @@ Managing student records manually is difficult and error-prone. This project pro
 ## Core Features
 - Add student details
 - Display records in table
+- Update existing Student records
+- Delete student records
 - Simple GUI interface
 - Input validation
 
