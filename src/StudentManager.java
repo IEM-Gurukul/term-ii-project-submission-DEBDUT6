@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 //Main class declaration (GUI extends JFrame)
 public class StudentManager extends JFrame {
+     //Declare UI components and data storage
     JTextField idField, nameField, courseField;
     JButton addBtn;
     JTable table;
