@@ -41,6 +41,7 @@ public class StudentManager extends JFrame {
         addBtn = new JButton("Add");
         addBtn.setBounds(300,20,100,30);
         add(addBtn);
+         //Table Setup
         model = new DefaultTableModel();
         model.addColumn("ID");
         model.addColumn("Name");
