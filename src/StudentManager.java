@@ -16,6 +16,7 @@ public class StudentManager extends JFrame {
         setTitle("Student Manager");
         setSize(500,400);
         setLayout(null);
+         //ID Label and Field
         JLabel idLabel = new JLabel("ID");
         idLabel.setBounds(20,20,100,25);
         add(idLabel);
