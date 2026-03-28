@@ -61,6 +61,7 @@ public class StudentManager extends JFrame {
                     JOptionPane.showMessageDialog(null,"Fill all fields");
                     return;
                 }
+                 //Store data in memory + table
                 students.add(new String[]{id,name,course});
                 model.addRow(new Object[]{id,name,course});
             }
