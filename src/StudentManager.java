@@ -37,6 +37,7 @@ public class StudentManager extends JFrame {
         courseField = new JTextField();
         courseField.setBounds(100,100,150,25);
         add(courseField);
+         //Add Button
         addBtn = new JButton("Add");
         addBtn.setBounds(300,20,100,30);
         add(addBtn);
