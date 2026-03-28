@@ -11,6 +11,7 @@ public class StudentManager extends JFrame {
     JTable table;
     DefaultTableModel model;
     ArrayList<String[]> students = new ArrayList<>();
+     //Constructor - Initialize GUI
     public StudentManager() {
         setTitle("Student Manager");
         setSize(500,400);
