@@ -23,6 +23,7 @@ public class StudentManager extends JFrame {
         idField = new JTextField();
         idField.setBounds(100,20,150,25);
         add(idField);
+         //ID Label and Field
         JLabel nameLabel = new JLabel("Name");
         nameLabel.setBounds(20,60,100,25);
         add(nameLabel);
