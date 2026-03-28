@@ -30,6 +30,7 @@ public class StudentManager extends JFrame {
         nameField = new JTextField();
         nameField.setBounds(100,60,150,25);
         add(nameField);
+         //Course Label and Field
         JLabel courseLabel = new JLabel("Course");
         courseLabel.setBounds(20,100,100,25);
         add(courseLabel);
