@@ -1,47 +1,54 @@
-//StudentManager 
+//Import required packages
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.*;
 import java.util.ArrayList;
-//Main class declaration (GUI extends JFrame)
+//Main class declaration
 public class StudentManager extends JFrame {
-     //Declare UI components and data storage
+    //UI components + data storage
     JTextField idField, nameField, courseField;
-    JButton addBtn;
+    JButton addBtn, updateBtn, deleteBtn;
     JTable table;
     DefaultTableModel model;
     ArrayList<String[]> students = new ArrayList<>();
-     //Constructor - Initialize GUI
+    //Constructor
     public StudentManager() {
         setTitle("Student Manager");
         setSize(500,400);
         setLayout(null);
-         //ID Label and Field
+        // ID
         JLabel idLabel = new JLabel("ID");
         idLabel.setBounds(20,20,100,25);
         add(idLabel);
         idField = new JTextField();
         idField.setBounds(100,20,150,25);
         add(idField);
-         //Name Label and Field
+        // Name
         JLabel nameLabel = new JLabel("Name");
         nameLabel.setBounds(20,60,100,25);
         add(nameLabel);
         nameField = new JTextField();
         nameField.setBounds(100,60,150,25);
         add(nameField);
-         //Course Label and Field
+        // Course
         JLabel courseLabel = new JLabel("Course");
         courseLabel.setBounds(20,100,100,25);
         add(courseLabel);
         courseField = new JTextField();
         courseField.setBounds(100,100,150,25);
         add(courseField);
-         //Add Button
+        //Buttons (Controller part)
         addBtn = new JButton("Add");
+        updateBtn = new JButton("Update");
+        deleteBtn = new JButton("Delete");
         addBtn.setBounds(300,20,100,30);
+        updateBtn.setBounds(300,60,100,30);
+        deleteBtn.setBounds(300,100,100,30);
         add(addBtn);
-         //Table Setup
+        add(addBtn);
+        add(updateBtn);
+        add(deleteBtn);
+        // Table setup
         model = new DefaultTableModel();
         model.addColumn("ID");
         model.addColumn("Name");
@@ -50,20 +57,44 @@ public class StudentManager extends JFrame {
         JScrollPane pane = new JScrollPane(table);
         pane.setBounds(20,150,440,200);
         add(pane);
-         //Add Button Action Logic (Insert Student Data)
+        // CONTROLLER (Action Listeners)
+        //  ADD
         addBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String id = idField.getText();
                 String name = nameField.getText();
                 String course = courseField.getText();
-                 //Validation Check
                 if(id.isEmpty() || name.isEmpty() || course.isEmpty()) {
                     JOptionPane.showMessageDialog(null,"Fill all fields");
                     return;
                 }
-                 //Store data in memory + table
                 students.add(new String[]{id,name,course});
                 model.addRow(new Object[]{id,name,course});
+            }
+        });
+        // UPDATE
+        updateBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int row = table.getSelectedRow();
+
+                if(row == -1) {
+                    JOptionPane.showMessageDialog(null,"Select a row to update");
+                    return;
+                }
+                model.setValueAt(idField.getText(), row, 0);
+                model.setValueAt(nameField.getText(), row, 1);
+                model.setValueAt(courseField.getText(), row, 2);
+            }
+        });
+        //  DELETE
+        deleteBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int row = table.getSelectedRow();
+                if(row == -1) {
+                    JOptionPane.showMessageDialog(null,"Select a row to delete");
+                    return;
+                }
+                model.removeRow(row);
             }
         });
     }
